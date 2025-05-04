@@ -8,6 +8,6 @@ export const EncryptString = (text: string) => {
 };
 
 export const DecryptString = (text: string) => {
-    const bytes = crypto.AES.decrypt(text, env.app.ENCRYPTION_SECRET as string);
+    const bytes = crypto.AES.decrypt(text, env.app.ENCRYPTION_SECRET);
     return bytes.toString(crypto.enc.Utf8);
 };
